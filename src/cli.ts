@@ -5,18 +5,10 @@ import chalk from "chalk";
 const specFile = process.argv[2];
 
 if (!specFile) {
-  console.log(chalk.red("❌ Error: No se proporcionó archivo de especificación"));
-  console.log(chalk.yellow("Uso correcto:"));
-  console.log(chalk.cyan("  npx tsx ./src/cli.ts requerimientos.md"));
+  console.log(chalk.red("❌ Debes indicar archivo de requerimientos"));
   process.exit(1);
 }
 
-console.log(chalk.blue("🚀 Iniciando Copilot Microservice Agent"));
-console.log(chalk.gray(`📄 Archivo de especificación: ${specFile}\n`));
+console.log(chalk.blue("🚀 Copilot Microservice Agent\n"));
 
-try {
-  await runOrchestrator(specFile);
-} catch (error) {
-  console.error(chalk.red("❌ Error fatal:"), error);
-  process.exit(1);
-}
+await runOrchestrator(specFile);
