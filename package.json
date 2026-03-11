@@ -1,0 +1,40 @@
+{
+  "name": "github-copilot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "copilot",
+    "mcp",
+    "csharp",
+    "microservice",
+    "generator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@github/copilot-sdk": "^0.1.32",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.3.1",
+    "fs-extra": "^11.3.4",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "ora": "^9.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/marked-terminal": "^6.1.1",
+    "@types/node": "^25.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
